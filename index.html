@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Live code</title>
+    <style>
+      body {
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      input {
+        margin-top: 30px;
+        margin-left: 20px;
+      }
+      button {
+        margin-top: 20px;
+        color: blueviolet;
+        background-color: aqua;
+        border-style: none;
+        padding: 5px 7px 5px 7px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <input type="number" placeholder="enter number" id="firstValue" />
+      <input type="number" placeholder="enter number" id="secondValue" />
+    </div>
+    <div class="oppraters">
+      <button class="add" onclick="additon()">+</button>
+      <button class="sub" onclick="subraction()">-</button>
+      <button class="multi" onclick="multi()">*</button>
+      <button class="divide" onclick="divide()">/</button>
+    </div>
+    <input type="number" placeholder="answer" id="answerValue" />
+    <script>
+      const firstValue = document.getElementById(`firstValue`);
+      const secondValue = document.getElementById(`secondValue`);
+      const finelValue = document.getElementById(`answerValue`);
+
+      //opraters
+      function additon() {
+        finelValue.value = Number(firstValue.value) + Number(secondValue.value);
+      }
+      function subraction() {
+        finelValue.value = Number(firstValue.value) - Number(secondValue.value);
+      }
+      function multi() {
+        finelValue.value = Number(firstValue.value) * Number(secondValue.value);
+      }
+      function divide() {
+        finelValue.value = Number(firstValue.value) + Number(secondValue.value);
+      }
+    </script>
+  </body>
+</html>
